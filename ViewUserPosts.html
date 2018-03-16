@@ -1,0 +1,59 @@
+<html>
+	<head>
+            <!-- Source files and references -->
+            <link href="style.css" rel="stylesheet" type="text/css"/>
+            <link href="https://fonts.googleapis.com/css?family=Mukta+Vaani" rel="stylesheet">
+
+            <!-- Header -->
+            <div class="a">
+            <h1 align="center"> List: Posts </h1>
+            </div>
+            <br>
+	</head>
+
+    <body>
+
+        <!-- User ID Select -->
+            <form  class="form-control" align="center" id="username" action="ViewUserPosts.php" method="post">
+                <h4> Please select username below... </h4>
+                
+                <!-- <h2> Username: </h2> -->
+                <select type="text" class="form-control" id="username" name="username" required>
+                    <?php
+                        //error_reporting(E_ALL);
+                        //ini_set("display_errors", 1);
+                    
+                        $mysqli = new mysqli("mysql.eecs.ku.edu", "j961w796", "zaT9uWah", "j961w796");
+
+                        if ($mysqli->connect_errno)
+                        {
+                            printf("Connect failed: %s\n", $mysqli->connect_error);
+                            exit();
+                        }
+
+                        //// Users ////
+                        $userQuery = "SELECT user_id FROM Users ORDER by user_id ";
+                        $arrayUsers = Array();
+                        $result = $mysqli->query($userQuery);
+
+                        /* fetch associative array */
+                        while ($row = $result->fetch_assoc())
+                        {
+                            $arrayUsers[] = $row['user_id'];
+                        }
+
+                        foreach($arrayUsers as $name)
+                        {
+                            echo "<option value='" .$name. "'>" .$name. "</option>";
+                        }
+
+                    ?>
+                </select>
+                <br><br>
+                <input class="special" type="submit" value="View Posts"  name="submit">
+            </form>
+
+            <?php include 'ViewUserPosts.php';?>
+	    
+    </body>
+</html>

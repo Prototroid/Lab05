@@ -1,0 +1,71 @@
+/* https://www.w3schools.com/html/tryit.asp?filename=tryhtml_links_colors */
+head
+{
+    font-family: 'Mukta Vaani', sans-serif;
+    color: black;
+}
+
+body
+{
+    font-family: 'Mukta Vaani', sans-serif;
+    color: black;
+    background-color:white;
+    background-image: url(webpage_back.jpg);
+    background-size: 100%;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+h2.a
+{
+    vertical-align: text-top;
+}
+
+textarea
+{
+    vertical-align: -50px;
+}
+
+div.a
+{
+    background-color: rgba(180, 185, 190, 0.25);
+    border-style: groove;
+    border-color: rgba(96, 116, 136, 0.25);
+    border-width: 4;
+    /* -webkit-margin-end: 800px; */
+}
+
+.special
+{
+    background-color: rgb(96, 116, 136);
+    border: none;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 9px 20px;
+    text-transform: uppercase;
+    /* -webkit-transition: 0.2s ease all;
+    -o-transition: 0.2s ease all; */
+    transition: 0.2s ease all;
+}
+
+a:link
+{
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover
+{
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+table
+{
+    border-style: groove;
+    border-color: rgb(96, 116, 136);
+    border-width: 4;
+}

@@ -1,0 +1,34 @@
+<html>
+	<head>
+            <!-- Source files and references -->
+            <link href="style.css" rel="stylesheet" type="text/css"/>
+            <link href="https://fonts.googleapis.com/css?family=Mukta+Vaani" rel="stylesheet">
+
+            <!-- Header -->
+            <div class="a">
+			<h1 align="center"> Create A Post </h1>
+            <h2 align="center"> What are you thinking about today? </h2>
+            </div>
+            <br>
+	</head>
+
+    <body>
+
+        <!-- Username creation -->
+            <form align="center" id="username" action="CreatePosts.php" method="post">
+                <h4> First enter your username below... </h4>
+                <br>
+                <h2> Username: <input type="text" class="form-control" id="user" placeholder="username" name="username" required></h2>
+                
+                <h4> ...then your thoughts below: </h4>
+                
+                <h2 class="a"> Post: <textarea rows="4" cols="50" class="form-control" id="user_post" placeholder="I like cookies!" name="user_post" required></textarea>
+                </h2>
+                <br>
+                <input class="special" type="submit" value="Create"  name="submit">
+            </form>
+
+            <?php include 'CreatePosts.php';?>
+	    
+    </body>
+</html>

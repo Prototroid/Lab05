@@ -1,0 +1,29 @@
+<html>
+	<head>
+            <!-- Source files and references -->
+            <link href="style.css" rel="stylesheet" type="text/css"/>
+            <link href="https://fonts.googleapis.com/css?family=Mukta+Vaani" rel="stylesheet">
+
+            <!-- Header -->
+            <div class="a">
+			<h1 align="center"> Create A User </h1>
+            <h2 align="center"> It's so simple! </h2>
+            </div>
+            <br>
+	</head>
+
+    <body>
+
+        <!-- Username creation -->
+            <form align="center" id="username" action="CreateUser.php" method="post">
+                <h4> Just enter a username below... </h4>
+                <br>
+                <h2> Username: <input type="text" class="form-control" id="user" placeholder="username" name="username" required></h2>
+                <br>
+                <input class="special" type="submit" value="Create"  name="submit">
+            </form>
+
+            <?php include 'CreateUser.php';?>
+	    
+    </body>
+</html>
